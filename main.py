@@ -10,9 +10,10 @@ from pymt import *
 from lib.window import WindowApp
 
 """
-Class MTApplication
+Class RecognizerWindowApp
+The class is responsable to organize the touches of the gesture, and then calculate each gesture is more similiar with the executed gesture
 """
-class MTApplication(WindowApp):	
+class RecognizerWindowApp(WindowApp):	
 	#fired when a touch is up
 	def on_touch_up(self, touch):
 		#build gesture
@@ -24,6 +25,6 @@ class MTApplication(WindowApp):
 
 if __name__ == '__main__':
 	window = MTWindow()
-	app = MTApplication()
+	app = RecognizerWindowApp()
 	window.add_widget(app)
 	runTouchApp()

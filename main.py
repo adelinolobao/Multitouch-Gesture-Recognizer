@@ -11,9 +11,13 @@ from lib.window import WindowApp
 
 """
 Class RecognizerWindowApp
-The class is responsable to organize the touches of the gesture, and then calculate each gesture is more similiar with the executed gesture
 """
 class RecognizerWindowApp(WindowApp):	
+	def __init__(self, **kwargs):
+		super(WindowApp, self).__init__(**kwargs)
+		#store gesture
+		self.gesture = []
+	
 	#fired when a touch is up
 	def on_touch_up(self, touch):
 		#build gesture

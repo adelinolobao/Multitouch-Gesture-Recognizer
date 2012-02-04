@@ -14,6 +14,11 @@ from lib.window import WindowApp
 from lib.helper import Helper
 
 class RecorderWindowApp(WindowApp):
+	def __init__(self, **kwargs):
+		super(WindowApp, self).__init__(**kwargs)
+		#store gesture
+		self.gesture = []
+	
 	def on_touch_up(self, touch):
 		self.gesture.append(touch.userdata['trace'])
 		if len(getCurrentTouches()) == 0:

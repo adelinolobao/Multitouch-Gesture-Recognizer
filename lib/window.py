@@ -8,12 +8,10 @@ Adelino Lobão
 
 from pymt import *
 
+"""
+Class WindowApp
+"""
 class WindowApp(MTWidget):
-	def __init__(self, **kwargs):
-		super(WindowApp, self).__init__(**kwargs)
-		#store gesture
-		self.gesture = []
-	
 	#fired when a touch is down
 	def on_touch_down(self, touch):
 		touch.userdata['points'] = list(touch.pos)

@@ -36,7 +36,8 @@ class RecognizerWindowApp(WindowApp):
 		#build gesture
 		self.gesture.append(touch.userdata['trace'])
 		if len(getCurrentTouches()) == 0:
-			print 'Recognition process...'
+			(name, score) = self.recognizer.recognize(self.gesture)
+			print name, score
 			#clean gesture
 			self.gesture = []
 

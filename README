@@ -5,4 +5,4 @@ Dependencies
 - PyMT (http://pymt.eu/)
 
 HOW TO
-- Run the recorder 'pymt recorder.py {gestureName}', for example if the gesture is a circle run 'pymt recorder.py circle'. The recorder will save the template gestures in the folder template inside the folder name
+- Run the recorder 'pymt recorder.py {gestureName}', for example if the gesture is a circle run 'pymt recorder.py circle'. It will be created a folder with all the template gestures.

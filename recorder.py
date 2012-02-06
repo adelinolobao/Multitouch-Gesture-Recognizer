@@ -13,6 +13,9 @@ from pymt import *
 from lib.window import WindowApp
 from lib.helper import Helper
 
+"""
+Class RecorderWindowApp
+"""
 class RecorderWindowApp(WindowApp):
 	def __init__(self, **kwargs):
 		super(WindowApp, self).__init__(**kwargs)

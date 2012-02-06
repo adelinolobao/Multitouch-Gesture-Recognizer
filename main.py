@@ -8,15 +8,28 @@ Adelino Lobão
 
 from pymt import *
 from lib.window import WindowApp
+from lib.recognizer import Recognizer
+from lib.helper import Helper
 
 """
 Class RecognizerWindowApp
 """
-class RecognizerWindowApp(WindowApp):	
+class RecognizerWindowApp(WindowApp):
 	def __init__(self, **kwargs):
 		super(WindowApp, self).__init__(**kwargs)
-		#store gesture
+		#create recognizer class
+		self.recognizer = Recognizer()
+		#load templates to recognizer
+		self.templates = Helper.returnTemplates()
+		self.loadTemplates()
+		#store current gesture
 		self.gesture = []
+	
+	#load templates to recognizer
+	def loadTemplates(self):
+		for key, value in self.templates.iteritems():	#iterate throught dict
+			for template in value:	#iterate through templates
+				self.recognizer.addTemplate(key, template)
 	
 	#fired when a touch is up
 	def on_touch_up(self, touch):

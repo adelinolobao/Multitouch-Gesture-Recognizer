@@ -3,6 +3,3 @@ Multitouch Gesture Recognizer using Python and PyMt
 Dependencies
 - Python 2.7.2
 - PyMT (http://pymt.eu/)
-
-HOW TO
-- Run the recorder 'pymt recorder.py {gestureName}', for example if the gesture is a circle run 'pymt recorder.py circle'. It will be created a folder with all the template gestures.
